@@ -1,5 +1,9 @@
 package com.github.perscholas.java_fundamentals;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.rmi.activation.ActivationGroup_Stub;
+
 /**
  * Created by Leon Hunter on 6/14/17.
  */
@@ -8,8 +12,8 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-
-        return null;
+        String outputString = "Hello World";
+        return outputString;
     }
 
     /**
@@ -18,8 +22,8 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-
-        return null;
+        String outputString = firstSegment + secondSegment;
+        return outputString;
     }
 
     /**
@@ -28,8 +32,8 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-
-        return null;
+        String outputString = String.valueOf(firstSegment) + secondSegment;
+        return outputString;
     }
 
     /**
@@ -37,8 +41,8 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-
-        return null;
+        String outputString = String.valueOf(input.charAt(0)) + String.valueOf(input.charAt(1)) + String.valueOf(input.charAt(2));
+        return outputString;
     }
 
     /**
@@ -46,8 +50,9 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-
-        return null;
+        String reversedString = new StringBuilder(input).reverse().toString();
+        String outputString = String.valueOf(reversedString.charAt(2)) + String.valueOf(reversedString.charAt(1)) + String.valueOf(reversedString.charAt(0));
+        return outputString;
     }
 
     /**
@@ -56,8 +61,10 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-
-        return null;
+        if (inputValue == comparableValue){
+            return true;
+        } else
+        return false;
     }
 
     /**
@@ -65,8 +72,10 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-
-        return null;
+        if (inputValue.length() % 2 == 0){
+            return inputValue.charAt((inputValue.length()/2)-1);
+        } else
+            return inputValue.charAt(inputValue.length()/2);
     }
 
     /**
@@ -92,7 +101,7 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-
-        return null;
+        String reversedString = new StringBuilder(stringToReverse).reverse().toString();
+        return reversedString;
     }
 }
